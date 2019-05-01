@@ -1,0 +1,332 @@
+    /*
+	* цвет посещенных ссылок
+	*/
+	
+	a:link, a:visited
+	{
+	    color: #5f791b;
+	}
+	
+	/*
+	* Ссылка при наведении курсора
+	*/
+	
+	
+	a:hover
+	{
+	    text-decoration: none
+	}
+	
+	
+	/*
+	* Тело страницы
+	*/
+	
+	body
+	{
+	    background: #f5f9e4;
+		color: #000;
+		font-family: Arial, Tahoma, sans-serif;
+		font-size: small;
+		margin: auto;
+		max-width: 700px;
+	}
+	
+	/*
+	* Оформление формы
+	*/
+	
+	form
+	{
+	    font-size: small;
+		margin: 0;
+		padding: 0;
+	}
+	
+	/*
+	* Оформление Текстового поля
+	*/
+	
+	input, select, textarea
+	{
+	    background: url('images/button.png') repeat-x bottom #c2d985;
+		border: 1px solid #89a247;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		color: #4a5f10;
+		cursor: pointer;
+		margin: 2px;
+		opacity: 0.8;
+		padding: 4px 10px;
+	}
+
+	textarea, input[type=text], input[type=password], select{outline: none;}
+	textarea:focus, input[type=text]:focus, input[type=password]:focus, select:focus{border-color: #888; box-shadow: 0 0 2px #888, 0 0 3px #888, 0 0 5px #888;}
+
+	
+	
+	/*
+	* Оформление "SELECT"
+	*/
+	
+	select
+	{
+	    background: #c5dfa6;
+		border: 1px solid #a1c478;
+		padding: 2px;
+		margin: 2px 2px 2px 4px;
+		color: #668d38;
+	}
+
+	
+	/*
+	* Оформление "SELECT" при наведении курсора
+	*/
+	
+	select:hover
+	{
+	    background: #c5dfa6;
+		border: 1px solid #a1c478;
+		border-left: 1px #bfbfbe solid;
+		padding: 2px;
+		margin: 2px 2px 2px 4px;
+		color: #668d38;
+	}
+
+	
+	img {border:none}
+
+
+	/*
+	* Оформление логотипа. Самый верхний див
+	*/
+	
+	.logo
+	{
+	    background: url('images/logo.png') repeat-x bottom #b8dc5a;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 0 0 10px 10px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+	
+	/*
+	* Оформление "заголовка"
+	*/
+	
+	.title
+	{
+	    background: url('images/header.png') repeat-x bottom #7f858a;
+		color: #fff;
+		padding: 7px;
+		margin-left: 9px;
+		margin-right: 9px;
+		border-radius: 7px;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px
+	}
+	
+	/*
+	* Меню авторизации
+	*/
+	
+	.aut
+	{
+	    background: url('images/tbm.png') repeat-x bottom #d3ec8f;
+		color: #fff;
+		margin: 0;
+		padding: 7px 0 5px 10px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px 10px 0 0;
+	}
+	
+	.aut a:hover, .fmenu a:hover{text-decoration: underline;}
+
+	.aut a:link, .aut a:visited, .fmenu a:link, .fmenu a:visited{color: #fff; text-decoration: none;}
+
+    .rekl
+   {
+        background: #f7f4f4;
+        border-top: 1px #d9d8d8 solid;
+        border-bottom: 1px #d9d8d8 solid;
+        padding: 5px;
+        margin: 2px 0 3px;
+    }
+
+    .status
+   {
+        color: #524383;
+        font-weight: 700;
+    }
+
+    .post
+   {
+        background: #f6f5f5 url('graph/menu_bg.png') left repeat-y;
+        border: 1px #d8d8d7 solid;
+        padding: 4px;
+        margin: 3px;
+        border-left: 3px solid #d4d4d4;
+		border-radius: 7px;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px
+    }
+
+    .p_t
+    {
+        background-color: #f3f9e2;
+        margin: 0;
+        padding: 7px;
+    }
+
+    .p_m
+    {
+        background-color: #ffd;
+        margin: 0;
+        padding: 7px;
+    }
+
+
+    .news
+   {
+        text-align: left;
+        font-weight: 400;
+        color: #646500;
+        background: #FEE;
+        /* border: 2px #FFB9B9 solid; */
+    }
+
+    .main_menu
+    {
+        background: #f6f5f5 url('graph/menu_bg.png') left repeat-y;
+        border: 1px #d8d8d7 solid;
+        padding: 2px;
+        margin: 3px 3px 3px 2px;
+        border-left: 3px solid #d4d4d4;
+    }
+
+    .sub
+   {
+        border-top: 1px dotted #c6c17f;
+        font-size: x-small;
+        margin-top: 4px;
+    }
+
+    .main_menu, .body
+   {
+        border: 5px solid #9fc43b;
+        font-weight: 400;
+        margin: 0;
+        padding: 2px;
+    }
+
+    .link
+   {
+        border-bottom: 1px solid #d9eca8;
+		display: block;
+        background: #f9ffea;
+        margin: 0;
+        padding: 8px;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px
+    }.link img {
+margin: -4px 0;
+}
+
+    .menu
+   {
+        border-left: 2px solid #090;
+        color: #090;
+        padding: 2px 0 2px 4px;
+    }
+
+    .menu a:link, .menu a:visited
+   {
+        background: url('images/ok.gif') no-repeat left;
+        padding: 6px;
+        padding-left: 16px
+    }
+
+    .menu a:hover
+   {
+        background: url('images/arrow_right.png') no-repeat left
+    }
+
+    .fmenu
+   {
+        background: url('images/fmenu.png') repeat-x top #d3ec8f;
+        color: #FFF;
+        margin: 0;
+        padding: 3px 1px 5px 3px;
+    }
+
+    .foot
+   {
+        background: url('images/header.png') repeat-x bottom #7f858a;
+        color: #fff;
+        margin: 0;
+        padding: 7px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 0 0 10px 10px;
+    }
+
+    .foot a
+   {
+        color: #ffd;
+        text-decoration: none;
+        border-bottom: 1px dotted #5d8e21;
+    }
+
+    .foot a:hover
+   {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 1px #a8b995 solid;
+    }
+
+    .err, .error
+   {
+        background: #f3dde2;
+        color: #9f203e;
+        margin: 0;
+        padding: 2px 0 3px 4px;
+    }
+
+   .msg {
+background:#eee;
+border-bottom:1px solid #ddd;
+color:#555;
+margin:0;
+padding:5px;
+}
+
+    .menu_razd, .link:hover
+   {
+        background: url('images/phdr.png') repeat-x #E9F7C4;
+        border-bottom: 1px solid #d9eca8;
+        color: #8dac3a;
+        padding: 8px 10px;
+    }
+.page, .page_no{
+border-radius: 15px;
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+display: inline-block;
+padding: 7px;
+text-decoration: none;
+}
+
+.page_no{
+background: #435a0c;
+color: #fff;
+}
+
+a.page:hover{background: #c6d0ad;}

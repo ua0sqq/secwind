@@ -1,0 +1,16 @@
+
+fghfghf
+
+----------
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /adm_panel/
+Disallow: /style/
+Disallow: /sys/
+Disallow: /chat/
+Disallow: /install/
+Disallow: /dcms/
+Disallow: /docs/
+
+Downloaded from lolka.oo
