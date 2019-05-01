@@ -1,4 +1,9 @@
 # ignore dir & files
 *.swc
 *.db
+SW.komodoproject
+style/themes/last_ver.png
+style/themes/weather_*
+style/users/avatar/*
+forum/files/*
 engine/files/data/settings.ini

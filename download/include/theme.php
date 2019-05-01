@@ -22,7 +22,7 @@ $g_preview_image_h = 100; // высота картинки
 if ($type == '.nth') {
     include '../incfiles/pclzip.php';
 
-    $nth = &new PclZip($theme);
+    $nth = new PclZip($theme);
 
     $content = $nth->extract(PCLZIP_OPT_BY_NAME, 'theme_descriptor.xml', PCLZIP_OPT_EXTRACT_AS_STRING);
     if (!$content) {
@@ -59,7 +59,7 @@ if ($type == '.nth') {
 } elseif ($type == '.thm') {
     include 'include/class_tar.php';
 
-    $thm = &new Archive_Tar($theme);
+    $thm = new Archive_Tar($theme);
     if (!$file = $thm->extractInString('Theme.xml') or !$file = $thm->extractInString(pathinfo($theme, PATHINFO_FILENAME) . '.xml')) {
 
         $list = $thm->listContent();

@@ -6,7 +6,7 @@ $name = 'screen/' . $file_name;
 if ($format_file == 'nth')
 {
     include H.'sys/inc/zip.php';
-    $nth = &new PclZip($theme);
+    $nth = new PclZip($theme);
     $content = $nth->extract(PCLZIP_OPT_BY_NAME, 'theme_descriptor.xml', PCLZIP_OPT_EXTRACT_AS_STRING);
     if (!$content)
     {
@@ -20,7 +20,7 @@ if ($format_file == 'nth')
 } elseif ($format_file == 'thm')
 {
     include 'class_tar.php';
-    $thm = &new Archive_Tar($theme);
+    $thm = new Archive_Tar($theme);
     if (!$file = $thm->extractInString('Theme.xml') or !$file = $thm->extractInString(pathinfo($theme, PATHINFO_FILENAME) . '.xml'))
     {
         $list = $thm->listContent();

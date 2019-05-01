@@ -3,7 +3,8 @@
 include H.'engine/includes/head.php';
 
 
-if ($admin) {    $sql->query("SELECT * FROM `down_files` WHERE `type` = 1 AND `id` = '$id' LIMIT 1");
+if ($admin) {
+    $sql->query("SELECT * FROM `down_files` WHERE `type` = 1 AND `id` = '$id' LIMIT 1");
     $res = $sql->fetch();
     if (!$sql->num_rows() || !is_dir($res['dir'] . '/' . $res['name'])) {
         echo 'Каталог не существует<br /><a href="index.php">К категориям</a>';
@@ -37,7 +38,7 @@ if ($admin) {    $sql->query("SELECT * FROM `down_files` WHERE `type` = 1 AND `
            include H.'engine/includes/foot.php';
         }
         $rus_name = my_esc($rus_name, true);
-        mysql_query("UPDATE `down_files` SET `field`='$user_down', `text` = '$format_files', `rus_name`='$rus_name' WHERE `id` = '$id' LIMIT 1");
+        $sql->query("UPDATE `down_files` SET `field`='$user_down', `text` = '$format_files', `rus_name`='$rus_name' WHERE `id` = '$id' LIMIT 1");
         if (file_exists(H.'engine/files/tmp/download[dir='.$id.'].swc'))
         unlink(H.'engine/files/tmp/download[dir='.$id.'].swc');
         header('location: index.php?id=' . $id);
