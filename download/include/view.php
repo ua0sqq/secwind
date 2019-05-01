@@ -10,7 +10,7 @@ include H.'engine/includes/head.php';
     include H.'engine/includes/foot.php';
 }
 
-//$title_pages = output_text(mb_substr($res_down['rus_name'], 0, 30));
+//$title_pages = text::output(mb_substr($res_down['rus_name'], 0, 30));
 //$textl = mb_strlen($res_down['rus_name']) > 30 ? $title_pages . '...' : $title_pages;
 
 $tree = array();
@@ -74,8 +74,8 @@ else
         $mp3 = new MP3_Id();
         $res_downult = $mp3->read($res_down['dir'] . '/' . $res_down['name']);
         $res_downult = $mp3->study();
-        $text_info = '<b>Исполнитель</b>: ' . output_text($mp3->artists) . '<br /><b>Альбом</b>: ' . output_text($mp3->album) . '<br /><b>Год выхода</b>: ' . $mp3->year . '<br />
-  <b>Композиция:</b> ' . output_text($mp3->name) . '<br/><b>Каналы:</b> ' . output_text($mp3->getTag('mode')) . '<br/><b>Битрейт:</b> ' . ($mp3->getTag('bitrate') > 0 ? $mp3->getTag('bitrate') : 'Не удалось распознать кодек') . '<br />';
+        $text_info = '<b>Исполнитель</b>: ' . text::output($mp3->artists) . '<br /><b>Альбом</b>: ' . text::output($mp3->album) . '<br /><b>Год выхода</b>: ' . $mp3->year . '<br />
+  <b>Композиция:</b> ' . text::output($mp3->name) . '<br/><b>Каналы:</b> ' . text::output($mp3->getTag('mode')) . '<br/><b>Битрейт:</b> ' . ($mp3->getTag('bitrate') > 0 ? $mp3->getTag('bitrate') : 'Не удалось распознать кодек') . '<br />';
     }
 if ($screen) {
     echo '<div class="p_m"><b>Скриншот';
