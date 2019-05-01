@@ -14,7 +14,7 @@
             $method,
             $kolvo = 0;
 
-        public function file_search($key, $method)
+        public function __construct($key, $method)
         {
             $key = trim(str_replace('  ',' ',str_replace("\r\n",' ',$key)));
             $this->method=$method;

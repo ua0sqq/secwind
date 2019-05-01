@@ -28,7 +28,7 @@
 			    <input name="step" value="<?=$_SESSION['install_step']+1?>" type="hidden" />
 				<input <?=isset($err)?'value="SecWind не готов к установке" disabled="disabled"':'value="Продолжить"'?> type="submit"/>
 				</form>
-			<?
+			<?php
 			include 'inc/foot.php';
 			exit;
 	    }
@@ -51,5 +51,5 @@
 		<input name="db" value="Tadochi" type="text"/><br />
 		<input value="Далее" type="submit" />
 		</form>
-	<?
+	<?php
 	include 'inc/foot.php';

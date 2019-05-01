@@ -107,7 +107,7 @@ if (isset($_POST['poll'])){
       `poll_set` = '".serialize($pollSet)."'
       WHERE `id` = '$topic'
       ");
-      while ($pollRes = mysql_fetch_array($pollReq)){
+      while ($pollRes = $sql->fetch()){
         if (!empty ($_POST[$pollRes['id']])){
           $text = mb_substr(trim($_POST[$pollRes['id']]), 0, 100);
           $sql->query("UPDATE `forum_polls` SET

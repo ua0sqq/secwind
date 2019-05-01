@@ -92,7 +92,7 @@
 		        <input name="step" value="5" type="hidden" />
 			    <input value="Завершить установку" type="submit" />
 		    </form>* после установки обязательно удалите папку /install/<br />
-		    <?
+		    <?php
 		}
 			
 		if (isset($err))
@@ -105,7 +105,7 @@
 			<form>
 			    <input value="Повторить" type="submit" />
 		    </form>
-			<?
+			<?php
 		}
 	}
 	else
@@ -126,6 +126,6 @@
 			* Все поля обязательны к заполнению<br />
 			<input type='submit' name='reg' value='Регистрация' /><br />
 		</form>
-		<?
+		<?php
 	}
 	include 'inc/foot.php';
