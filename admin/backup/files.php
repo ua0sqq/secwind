@@ -63,5 +63,5 @@
 	<a href='/admin/backup/list.php'><div class="link">Список Backup</div></a>
 	<a href='mysql.php'><div class="link">Резервное копирование базы данных</div></a>
     <a href='/admin/'><div class="link">Админка</div></a>
-    <?
+    <?php
     require incDir.'foot.php';

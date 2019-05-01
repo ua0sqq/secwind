@@ -37,7 +37,7 @@
         font-size:smaller;
         }
     </style>
-    <?
+    <?php
 
     switch($act)
     {
@@ -112,7 +112,7 @@
             <a href='panel.php' class="link">Экспресс панель</a>
 			<a href='/pages/menu.php' class="link">Кабинет</a>
 			<a href='/' class="link">Главная</a>
-            <?
+            <?php
         break;
 
 		case 'ModMas':
@@ -135,7 +135,7 @@
 			
 			</tr></table>
             <a href='/admin/'><div class="link">Админка</div></a>
-            <?
+            <?php
         break;
 
 		case 'Desman':
@@ -216,7 +216,7 @@
                 <a href="anti/antitwink.php"><div class="link">AntiTwink</div></a>
                 <a href="anti/antiflood.php"><div class="link">AntiFlood</div></a>
                 <a href='/admin/'><div class="link">Админка</div></a>
-            <?
+            <?php
         break;
 
 		case 'mysql':
@@ -229,7 +229,7 @@
             <td><div class="link"><a href='mysql/check.php'>Проверка таблиц</a></div></td>
 			</tr></table>
             <a href='/admin/' class="link">Админка</a>
-            <?
+            <?php
         break;
 
         case 'about':
@@ -241,7 +241,7 @@
             <a href='about/update.php'><div class="link">Обновление движка</div></a>
             <a href='about/help.php'><div class="link">Нужна Ваша помощь!</div></a>
             <a href='/admin/'><div class="link">Админка</div></a>
-            <?
+            <?php
         break;
     }
 

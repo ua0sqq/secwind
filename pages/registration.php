@@ -114,7 +114,7 @@
 					?>
 					Вы успешно зарегистрировались<br />
 					 <a href="/pages/user.php"><div class="link">Перейти в свой кабинет</div></a>
-					<?
+					<?php
 					include H.'engine/includes/foot.php';
 				}
 			}
@@ -130,13 +130,13 @@
 	Логин [A-z А-я 0-9]<br />
 	<input type="text" name="login" value="<?=Core::form('login')?>" /><br />
 	
-	<?
+	<?php
 	if (!empty($set['activation_acc']))
 	{
 	?>
 			E-mail:<br />
 			<input type="text" name="email" value="<?=Core::form('email')?>"/><br />
-	<?
+	<?php
 	}
 	?>
 	
@@ -160,5 +160,5 @@
 	<input type="submit" name="auth" value="Зарегистрироваться" />
 	
 	</form>
-	<?
+	<?php
 	include H.'engine/includes/foot.php';

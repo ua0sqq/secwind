@@ -18,6 +18,6 @@
 
     ?>
     <a href="/"><div class="link">Главная</div></a>
-    <?
+    <?php
 	include H.'engine/includes/user_menu.php';
 	include H.'engine/includes/foot.php';

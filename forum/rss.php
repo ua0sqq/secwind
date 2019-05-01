@@ -1,4 +1,4 @@
-<?
+<?php
 
 include '../engine/includes/start.php';
 require_once('includes/functions.php');

@@ -16,7 +16,7 @@
 		<response>
 			<new_mail><?=$sql->query('SELECT sum(`unread`) FROM `mail_contacts` WHERE `user_id` = ' . $user_id)->result()?></new_mail>
 		</response>
-		<?
+		<?php
 		exit;
 		break;
 		/*
@@ -77,11 +77,11 @@
 				?>
 					<form action="?act=<?=$act . '&amp;id=' .$id?>" method="POST">
 						Сообщение:<br />
-						<textarea name="text"><? echo !empty($text) ? $text : null ?></textarea><br />
+						<textarea name="text"><?php echo !empty($text) ? $text : null ?></textarea><br />
 						
 						<input type="submit" name="add_mail"/>
 					</form>
-				<?
+				<?php
 				
 				
 				
@@ -180,15 +180,15 @@
 			?>
 				<form action="" method="POST">
 					Введите логин пользователя:<br />
-					<input type="text" name="login" value="<? echo empty($_SESSION['login_mail']) ? '' : $_SESSION['login_mail']; ?>" /><br />
+					<input type="text" name="login" value="<?php echo empty($_SESSION['login_mail']) ? '' : $_SESSION['login_mail']; ?>" /><br />
 					
 					Сообщение:<br />
-					<textarea name="text"><? echo empty($_SESSION['text_mail']) ? '' : $_SESSION['text_mail']; ?></textarea><br />
+					<textarea name="text"><?php echo empty($_SESSION['text_mail']) ? '' : $_SESSION['text_mail']; ?></textarea><br />
 					
 					<input type="submit" name="add"/>
 				</form>
 				<a href="?"><div class="menu_razd">Список контактов</div></a>
-			<?
+			<?php
 			break;
 
 

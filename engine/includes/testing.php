@@ -1,4 +1,4 @@
-<?
+<?php
 
 echo "Версия SecWind: $set[version] $set[status] <br />\n";
 

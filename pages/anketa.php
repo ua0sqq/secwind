@@ -177,5 +177,5 @@
 		<a href="user.php"><div class="link">Анкета</div></a>
 		<a href="menu.php"><div class="link">Кабинет</div></a>
 		<a href="/"><div class="link">Главная</div></a>
-	<?
+	<?php
 	include H.'engine/includes/foot.php';

@@ -1,4 +1,4 @@
-<?
+<?php
 class Lingua_Stem_Ru
 {
 var $VOWEL = '/аеиоуыэюя/uim';

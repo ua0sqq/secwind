@@ -74,7 +74,7 @@
 				
 				<input type="submit" name="go2" value="Завершить">
 				</form>
-			<?
+			<?php
 			}
 		}
 		else
@@ -141,6 +141,6 @@
 		</form>
 		На ваш E-mail придет ссылка для установки нового пароля.<br />
 		Если у вас в анкете отсутствует запись о вашем e-mail, восстановление пароля невозможно.<br />
-		<?
+		<?php
 	}
 	include H.'engine/includes/foot.php';

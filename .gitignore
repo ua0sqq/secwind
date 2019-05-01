@@ -1,4 +1,4 @@
 # ignore dir & files
 *.swc
 *.db
-!engine/files/data/settings.ini
+engine/files/data/settings.ini

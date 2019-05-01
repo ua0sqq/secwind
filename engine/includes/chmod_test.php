@@ -1,4 +1,4 @@
-<?
+<?php
 
 $install = !file_exists(H.'engine/files/data/settings.ini');
 

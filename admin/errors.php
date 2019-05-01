@@ -84,7 +84,7 @@
     <div class="menu_razd"><a href="?do=clean&amp;type=<?=$type?>">Очистить список</a></div>
 	<a href='/admin/?act=security'><div class="link">Безопасность</div></a>
     <a href='/admin/'><div class="link">В админку</div></a>
-    <?
+    <?php
 
     $page = $res = null;
 

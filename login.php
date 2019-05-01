@@ -110,5 +110,5 @@
         &raquo;Регистрация
         </div>
     </a>
-    <?
+    <?php
     include H.'engine/includes/foot.php';

@@ -36,6 +36,6 @@
     </form>
 	<a href="/admin/?act=mysql"><div class="menu_razd" style="width:45%;display:inline-block">MySQL</div></a>
     <a href="/admin/"><div class="menu_razd" style="width:48%;display:inline-block">Админка</div></a>
-	<?
+	<?php
     
     include incDir.'foot.php';

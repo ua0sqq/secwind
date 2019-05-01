@@ -1,4 +1,4 @@
-<?
+<?php
 
 function DownloadFile($filename, $name, $mimetype='application/octet-stream')
 {
