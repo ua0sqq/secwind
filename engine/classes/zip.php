@@ -106,16 +106,15 @@
     return;
   }
 
-  public function create($p_filelist)
+  public function create($p_filelist, ...$v_arg_list)
   {
     $v_result=1;
     $this->privErrorReset();
     $v_options = array();
     $v_options[PCLZIP_OPT_NO_COMPRESSION] = FALSE;
-    $v_size = func_num_args();
+    $v_size = count($v_arg_list);
 
     if ($v_size > 1) {
-      $v_arg_list = func_get_args();
       array_shift($v_arg_list);
       $v_size--;
 
@@ -218,7 +217,7 @@
     return $p_result_list;
   }
 
-  function add($p_filelist)
+  function add($p_filelist, ...$v_arg_list)
   {
     $v_result=1;
 
@@ -227,10 +226,9 @@
     $v_options = array();
     $v_options[PCLZIP_OPT_NO_COMPRESSION] = FALSE;
 
-    $v_size = func_num_args();
+    $v_size = count($v_arg_list);
 
     if ($v_size > 1) {
-      $v_arg_list = func_get_args();
      
       array_shift($v_arg_list);
       $v_size--;
@@ -356,7 +354,7 @@
     return $p_list;
   }
 
-  function extract()
+  function extract(...$v_arg_list)
   {
     $v_result=1;
     $this->privErrorReset();
@@ -370,12 +368,11 @@
     $v_remove_path = "";
     $v_remove_all_path = false;
 
-    $v_size = func_num_args();
+    $v_size = count($v_arg_list);
     $v_options[PCLZIP_OPT_EXTRACT_AS_STRING] = FALSE;
     $v_options[PCLZIP_OPT_SUBSTITUE_FILE] = FALSE;
     
     if ($v_size > 0) {
-      $v_arg_list = func_get_args();
   
       if ((is_integer($v_arg_list[0])) && ($v_arg_list[0] > 77000)) {
      
@@ -452,7 +449,7 @@
     return $p_list;
   }
   
-  function extractByIndex($p_index)
+  function extractByIndex($p_index, ...$v_arg_list)
   {
     $v_result=1;
     $this->privErrorReset();
@@ -466,11 +463,10 @@
     $v_remove_path = "";
     $v_remove_all_path = false;
 
-    $v_size = func_num_args();
+    $v_size = count($v_arg_list);
     $v_options[PCLZIP_OPT_EXTRACT_AS_STRING] = FALSE;
 
     if ($v_size > 1) {
-      $v_arg_list = func_get_args();
      
       array_shift($v_arg_list);
       $v_size--;
@@ -550,7 +546,7 @@
     return $p_list;
   }
 
-  function delete()
+  function delete(...$v_arg_list)
   {
     $v_result=1;
     $this->privErrorReset();
@@ -560,10 +556,9 @@
     }
 
     $v_options = array();
-    $v_size = func_num_args();
+    $v_size = count($v_arg_list);
 
     if ($v_size > 0) {
-      $v_arg_list = func_get_args();
      
       $v_result = $this->privParseOptions($v_arg_list, $v_size, $v_options,
                                         array (PCLZIP_OPT_BY_NAME => 'optional',
@@ -3602,21 +3597,6 @@
   {
     $v_result=1;
 
-    if (   (!function_exists("get_magic_quotes_runtime"))
-        || (!function_exists("set_magic_quotes_runtime"))) {
-      return $v_result;
-    }
-
-    if ($this->magic_quotes_status != -1) {
-      return $v_result;
-    }
-
-    $this->magic_quotes_status = @get_magic_quotes_runtime();
-
-    if ($this->magic_quotes_status == 1) {
-      @set_magic_quotes_runtime(0);
-    }
-
     return $v_result;
   }
 
@@ -3624,19 +3604,6 @@
   function privSwapBackMagicQuotes()
   {
     $v_result=1;
-
-    if (   (!function_exists("get_magic_quotes_runtime"))
-        || (!function_exists("set_magic_quotes_runtime"))) {
-      return $v_result;
-    }
-
-    if ($this->magic_quotes_status != -1) {
-      return $v_result;
-    }
-
-    if ($this->magic_quotes_status == 1) {
-        @set_magic_quotes_runtime($this->magic_quotes_status);
-    }
 
     return $v_result;
   }

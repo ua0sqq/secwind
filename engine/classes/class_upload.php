@@ -615,7 +615,7 @@ class upload {
 
     }
 
-    function upload($file, $lang = 'en_GB') {
+    function __construct($file, $lang = 'en_GB') {
 
         $this->version            = '0.31';
 
